@@ -1,0 +1,81 @@
+:root{
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body{
+    background: var(--bg);
+  color: var(--fontColor);
+  font-family: Helvetica, Arial, sans-serif;
+  transition: background-color 0.4s, color 0.4s;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;      /* centrează vertical */
+  justify-content: center;  /* centrează orizontal */
+}
+
+
+li{
+    list-style: circle;
+}.list{
+    list-style: square;
+}
+
+
+.light-theme{
+    --bg: var(--green);
+    --fontColor:var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme{
+    --bg:var(--black);
+    --fontColor:var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+.btn{
+    color: var(--btnFontColor);
+    background: var(--btnBg);
+}
+
+.btn  {
+  position: absolute;
+  top: 20px;
+  left: 320px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+.btn_brat{
+   background: none;
+  border: none;
+  padding: 0;
+  margin-top: 24px;          /* separă-l puțin de conținut */
+  font: inherit;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 5rem); /* mare și responsive */
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--btnFontColor);        /* se schimbă cu tema */
+  cursor: pointer;
+  transition: transform 0.1s ease, text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.btn{
+  left: 250px;
+}
+.btn_brat{
+  left: 320px;
+}
+.btn:hover, .btn_brat:hover {
+  transform: scale(1.06);
+}
